@@ -7,6 +7,7 @@ const typedfield = document.getElementById('typed');
 const wrap = document.getElementById('wrap');
 const start = document.getElementById('start');
 const count = document.getElementById('count');
+const typedCount = document.getElementById('typedCount');
 
 const textLists = [
   'Hello World','This is my App','How are you?',
@@ -47,6 +48,7 @@ const keyPress = e => {
   untyped = untyped.substring(1);
   typedfield.textContent = typed;
   untypedfield.textContent = untyped;
+  typedCount.textContent = score;
 
   if (untyped === '') {
     createText();
@@ -93,8 +95,10 @@ start.addEventListener('click', () => {
   timer();
   createText();
   start.style.display = 'none';
+  typedCount.style.display = 'block';
   document.addEventListener('keypress', keyPress);
 });
 
 untypedfield.textContent = 'スタートボタンで開始';
+typedCount.style.display = 'none';
   

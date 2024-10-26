@@ -24,3 +24,9 @@ body {
 .mistyped {
   background: red;
 }
+
+.typed-count {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+}
